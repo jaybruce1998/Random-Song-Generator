@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        />
+    <Button
+        android:id="@+id/showVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Video"
+        android:onClick="show"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/generateNewVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate New Video"
+        android:layout_below="@id/showVideo"
+        android:onClick="generateContent"
+        android:visibility="gone"
+        />
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/generateNewVideo"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
